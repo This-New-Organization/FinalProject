@@ -23,13 +23,13 @@ export class NavMenu extends React.Component<{}, {}> {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ '/counter' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-education'></span> Counter
+                            <NavLink to={ '/login' } activeClassName='active'>
+                                <span className='glyphicon glyphicon-education'></span> Login
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ '/fetchdata' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Fetch data
+                            <NavLink to={ '/ContactUs' } activeClassName='active'>
+                                <span className='glyphicon glyphicon-th-list'></span> Contact Us
                             </NavLink>
                         </li>
                     </ul>
