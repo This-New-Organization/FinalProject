@@ -237,3 +237,5 @@ _Pvt_Extensions
 .fake/
 
 \.vscode/
+
+my-app/node_modules/
