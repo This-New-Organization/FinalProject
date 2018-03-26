@@ -235,7 +235,14 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+<<<<<<< HEAD
 
 \.vscode/
 
 my-app/node_modules/
+=======
+
+\.vscode/
+
+appsettings\.json
+>>>>>>> LogInPage-LL
