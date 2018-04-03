@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using FinalProject.Models;
+using FinalProject.Data;
 
 
 namespace FinalProject.Controllers
@@ -12,8 +12,8 @@ namespace FinalProject.Controllers
 
         // where you see "FinalProjectContext" will change in the future, used as placeholder only
 
-        private readonly FinalProjectContext _context;
-        public HomePageController(FinalProjectContext context)
+        private readonly ApplicationDbContext _context;
+        public HomePageController( context)
         {
             _context = context;
         }
