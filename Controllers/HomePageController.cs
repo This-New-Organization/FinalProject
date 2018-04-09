@@ -13,31 +13,14 @@ namespace FinalProject.Controllers
         // where you see "FinalProjectContext" will change in the future, used as placeholder only
 
         private readonly ApplicationDbContext _context;
-        public HomePageController( context)
+        public HomePageController( ApplicationDbContext context)
         {
             _context = context;
         }
-
-        public IActionResult Index() {
-            // "Customer is just a name placeholder"
-            List<Customer> customers = _context.Customer.ToList();
-
-            return View(customers);
-        }
     [HttpGet]
-    public IActionResult Edit(int id){
-        Customer customer = _context.Customers.FirstOrDefault( c => id == id);
-        return View(customer);
+    public IActionResult Get()
+    {
+        return Ok(_context.PageContents.FirstOrDefault(Page => Page.PageName == "HomePage"));
     }
-    [HttpPost]
-    public IActionResult Edit(Customer editCustomer){
-        Customer originalCustomer = _context.Customers.FirstOrDefault( c => c.Id == id);
-        originalCustomer.FirstName = editedCustomer.FirstName;
-        originalCustomer.LastName = editedCustomer.LastName;
-        originalCustomer.Email = editedCustomer.Email;
-        _context.Customer.Update(originalCustomer);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
-        }
     }
 }

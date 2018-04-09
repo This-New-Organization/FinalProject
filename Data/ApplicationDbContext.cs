@@ -15,6 +15,7 @@ namespace FinalProject.Data
         
         public DbSet<TeamMembers> TeamMembers { get; set; }
         public DbSet<ContactForm> ContactForm { get; set; }
+        public DbSet<PageContent> PageContents { get; set; }
         
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
