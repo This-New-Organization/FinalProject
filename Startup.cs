@@ -88,6 +88,11 @@ namespace FinalProject
                     context.TeamMembers.Add(new TeamMembers { NameFirst = "Luis", NameLast = "Lopez", About = "Luis", Title = "Lopez" });
                     context.SaveChanges();
                 }
+                if (!context.PageContents.Any())
+                {
+                    context.PageContents.Add(new PageContent{ Title = "Welcome", Description = "Check your sleeping schedule", PageName = "HomePage"});
+                    context.SaveChanges();
+                }
             }
             catch (Exception ex){
                 Console.WriteLine("Unable to seed database.");

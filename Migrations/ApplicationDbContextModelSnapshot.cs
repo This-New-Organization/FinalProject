@@ -92,6 +92,22 @@ namespace FinalProject.Migrations
                     b.ToTable("ContactForm");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.PageContent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("PageName");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PageContents");
+                });
+
             modelBuilder.Entity("FinalProject.Models.TeamMembers", b =>
                 {
                     b.Property<int>("Id")
